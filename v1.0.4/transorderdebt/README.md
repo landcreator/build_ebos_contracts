@@ -27,7 +27,7 @@ transorderdebt
 | quantity | asset | 是           | 数量   |
 | memo | string | 是           |  自定义字符串  |
 | fee | asset | 是           | 费用   |
-| timestamp | block_timestamp | 自动创建          | 时间戳   |
+| timestamp | string | 是          | 时间戳   |
 
 ## transorderdebt::transupsert   转账信息的记录（增加或更新）
    - **trans_id**  交易id
@@ -36,6 +36,7 @@ transorderdebt
    - **quantity**  数量
    - **memo**      自定义字符串
    - **fee**       费用   
+   - **timestamp**  时间戳
 
 ## transorderdebt::transerase    转账信息的删除（根据交易id号删除）
    - **trans_id**
@@ -50,7 +51,7 @@ transorderdebt
 | logistics | string | 是           | 物流信息   |
 | goods_info | string | 是           | 商品信息   |
 | merchant | name | 是           | 商户账户   |
-| timestamp | block_timestamp | 自动创建          | 时间戳   |
+| timestamp | string | 是          | 时间戳   |
 
 ## transorderdebt::orderupsert   订单信息的记录（增加或更新）
    - **order_id**   订单号
@@ -58,6 +59,7 @@ transorderdebt
    - **logistics**  物流信息
    - **goods_info** 商品信息
    - **merchant**   商户账户
+   - **timestamp**  时间戳
 
 ## transorderdebt::ordererase    转账信息的删除（根据交易id号删除）
    - **order_id**  订单id
@@ -70,20 +72,17 @@ transorderdebt
 | pkey  | uint64 | 自动创建           | 主索引，递增 |
 | debt_id  | uint128 | 是           | 二级索引，根据债务id索引 |
 | debtor | name | 是           | 债务方   |
-| creditor | name | 是           | 债权方   |
 | quantity | asset | 是           | 数量   |
-| fee | asset | 是           | 费用   |
 | profile | map<string string> | 是           | 债务信息   |
-| timestamp | block_timestamp | 自动创建          | 时间戳   |
+| timestamp | string | 是          | 时间戳   |
 
 ## transorderdebt::debtupsert
    - **debt_id**   债务id
    - **debtor**    债务方
-   - **creditor**  债权方
    - **quantity**  数量
-   - **fee**       费用
    - **profile**   债务信息  
-   
+   - **timestamp**  时间戳
+ 
 ## transorderdebt::debterase    债务信息的删除（根据债务id号删除）
    - **debt_id**   债务id
    
