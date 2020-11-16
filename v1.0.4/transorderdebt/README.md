@@ -86,5 +86,34 @@ transorderdebt
 ## transorderdebt::debterase    债务信息的删除（根据债务id号删除）
    - **debt_id**   债务id
    
+## transorderdebt::ordererase    转账信息的删除（根据交易id号删除）
+   - **order_id**  订单id
+
+
+**解债关系表**：
+
+| 参数名称  | 类型    | 是否必填描述 | 描述     |
+| --------- | ------- | ------------ | -------- |
+| pkey  | uint64 | 自动创建           | 主索引，递增 |
+| dis_creditor  | checksum256 | 是           | 二级索引，根据债务id和债权方确定 |
+| discharge_id  | uint128 | 是           | 债务id|
+| debtor | name | 是           | 债务方   |
+| creditor | name | 是           | 债权方   |
+| quantity | asset | 是           | 数量   |
+| profile | map<string string> | 是           | 债务信息   |
+| timestamp | string | 是          | 时间戳   |
+
+## transorderdebt::debtdisup
+   - **discharge_id**   债务id
+   - **debtor**    债务方
+   - **creditor**    债权方
+   - **quantity**  数量
+   - **profile**   债务信息  
+   - **timestamp**  时间戳
+   
+## transorderdebt::debtdiserase    债务信息的删除（根据债务id号和债权人删除）
+   - **discharge_id**   债务id
+   - **creditor**   债权方
+   
 
   

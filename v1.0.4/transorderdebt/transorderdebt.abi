@@ -34,6 +34,50 @@
             ]
         },
         {
+            "name": "debtdiserase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "discharge_id",
+                    "type": "uint128"
+                },
+                {
+                    "name": "creditor",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "debtdisup",
+            "base": "",
+            "fields": [
+                {
+                    "name": "discharge_id",
+                    "type": "uint128"
+                },
+                {
+                    "name": "debtor",
+                    "type": "name"
+                },
+                {
+                    "name": "creditor",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "profile",
+                    "type": "pair_string_string[]"
+                },
+                {
+                    "name": "timestamp",
+                    "type": "string"
+                }
+            ]
+        },
+        {
             "name": "debterase",
             "base": "",
             "fields": [
@@ -66,6 +110,44 @@
                 {
                     "name": "timestamp",
                     "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "dischargedebt",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pkey",
+                    "type": "uint64"
+                },
+                {
+                    "name": "discharge_id",
+                    "type": "uint128"
+                },
+                {
+                    "name": "debtor",
+                    "type": "name"
+                },
+                {
+                    "name": "creditor",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "profile",
+                    "type": "pair_string_string[]"
+                },
+                {
+                    "name": "timestamp",
+                    "type": "string"
+                },
+                {
+                    "name": "dis_creditor",
+                    "type": "checksum256"
                 }
             ]
         },
@@ -242,6 +324,16 @@
     ],
     "actions": [
         {
+            "name": "debtdiserase",
+            "type": "debtdiserase",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "debtdisup",
+            "type": "debtdisup",
+            "ricardian_contract": ""
+        },
+        {
             "name": "debterase",
             "type": "debterase",
             "ricardian_contract": ""
@@ -276,6 +368,13 @@
         {
             "name": "debts",
             "type": "debt",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "discharges",
+            "type": "dischargedebt",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
