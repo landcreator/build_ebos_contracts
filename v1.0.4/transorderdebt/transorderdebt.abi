@@ -13,7 +13,7 @@
                 },
                 {
                     "name": "debt_id",
-                    "type": "uint128"
+                    "type": "uint64"
                 },
                 {
                     "name": "debtor",
@@ -39,7 +39,7 @@
             "fields": [
                 {
                     "name": "discharge_id",
-                    "type": "uint128"
+                    "type": "uint64"
                 },
                 {
                     "name": "creditor",
@@ -53,7 +53,7 @@
             "fields": [
                 {
                     "name": "discharge_id",
-                    "type": "uint128"
+                    "type": "uint64"
                 },
                 {
                     "name": "debtor",
@@ -83,7 +83,7 @@
             "fields": [
                 {
                     "name": "debt_id",
-                    "type": "uint128"
+                    "type": "uint64"
                 }
             ]
         },
@@ -93,7 +93,7 @@
             "fields": [
                 {
                     "name": "debt_id",
-                    "type": "uint128"
+                    "type": "uint64"
                 },
                 {
                     "name": "debtor",
@@ -123,7 +123,7 @@
                 },
                 {
                     "name": "discharge_id",
-                    "type": "uint128"
+                    "type": "uint64"
                 },
                 {
                     "name": "debtor",
@@ -147,7 +147,7 @@
                 },
                 {
                     "name": "dis_creditor",
-                    "type": "checksum256"
+                    "type": "uint128"
                 }
             ]
         },
@@ -161,7 +161,7 @@
                 },
                 {
                     "name": "order_id",
-                    "type": "uint128"
+                    "type": "uint64"
                 },
                 {
                     "name": "account",
@@ -191,7 +191,7 @@
             "fields": [
                 {
                     "name": "order_id",
-                    "type": "uint128"
+                    "type": "uint64"
                 }
             ]
         },
@@ -201,7 +201,7 @@
             "fields": [
                 {
                     "name": "order_id",
-                    "type": "uint128"
+                    "type": "uint64"
                 },
                 {
                     "name": "account",
@@ -245,7 +245,7 @@
             "fields": [
                 {
                     "name": "trans_id",
-                    "type": "checksum256"
+                    "type": "uint64"
                 }
             ]
         },
@@ -259,7 +259,7 @@
                 },
                 {
                     "name": "trans_id",
-                    "type": "checksum256"
+                    "type": "uint64"
                 },
                 {
                     "name": "from",
@@ -293,7 +293,7 @@
             "fields": [
                 {
                     "name": "trans_id",
-                    "type": "checksum256"
+                    "type": "uint64"
                 },
                 {
                     "name": "from",
