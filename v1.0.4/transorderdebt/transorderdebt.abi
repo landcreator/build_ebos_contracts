@@ -245,7 +245,7 @@
             "fields": [
                 {
                     "name": "trans_id",
-                    "type": "uint64"
+                    "type": "checksum256"
                 }
             ]
         },
@@ -259,7 +259,7 @@
                 },
                 {
                     "name": "trans_id",
-                    "type": "uint64"
+                    "type": "checksum256"
                 },
                 {
                     "name": "from",
@@ -293,7 +293,7 @@
             "fields": [
                 {
                     "name": "trans_id",
-                    "type": "uint64"
+                    "type": "checksum256"
                 },
                 {
                     "name": "from",
